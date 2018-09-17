@@ -1,144 +1,186 @@
-body{
-  margin: 0;
-  background: #313131;
-  font-family: "Montserrat";
-  font-weight: 300;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body, html {
+    height: calc(100% - 2em);
+    margin: 0;
+    font-family: 'Montserrat';
 }
 
-.small{
-  position: fixed;
-  left: -50%;
-  right: auto;
-
-  bottom: -50%;
-
+body {
+    background: #212121;
 }
 
-.text{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  bottom: 10%;
-
-  height: 200px;
-  width: auto;
-  margin-top: -15em;
+aside {
+    color: #C4C4C4;
+    display: grid;
+    grid-template-columns: auto 40px;
+    padding: 1em;
 }
 
-div{
-  margin: 0;
-  padding: 10px;
-  list-style: none;
+img {
+    width: 40px;
+    cursor: pointer;
 }
 
-div ul{
-
+figure {
+    margin: 0;
 }
 
-div a{
-  color: #C4C4C4;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 26px;
-  font-style: normal;
+figcaption {
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
-div li{
-  display: inline-block;
-  margin: 0 40;
-  padding-top: 35px;
-
-  position: relative;
+nav {
+    background: #313131;
+    background-position: center;
+    background-size: 100%;
 }
 
-.container{
-  width: 80%;
-  margin: 0 auto;
-}
-
-header{
-  background: #1f1f1f;
-}
-
-header::after{
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.logo{
-  float: left;
-  height: 100px;
-  width: auto;
-}
-
-
-nav{
-  float: right;
-}
-
-nav ul{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav li{
-  display: inline-block;
-  margin: 0 35;
-  padding-top: 35px;
-
-  position: relative;
-}
-
-nav a{
-  color: #C4C4C4;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 26px;
-  font-style: normal;
-
-  }
-
-  div a:hover{
-  color: #6E6E6E;
-  }
-
-  div a::before{
-    content: "";
-    display: block;
-    height: 5px;
-    background-color: #C4C4C4;
-
+.active {
     position: absolute;
+    display: block;
+    background: #313131;
+    width: 50%;
+    left: 0;
     top: 0;
-    width: 0%;
-    transition: all ease-in-out 200ms;
-  }
-
-  div a:hover::before{
-  width: 100%;
-  }
-
-
-
-nav a:hover{
-color: #6E6E6E;
+    height: 100%;
 }
 
-nav a::before{
-  content: "";
-  display: block;
-  height: 5px;
-  background-color: #C4C4C4;
-
-  position: absolute;
-  top: 0;
-  width: 0%;
-  transition: all ease-in-out 200ms;
+ul {
+    display: none;
+    list-style-type: none;
+    margin: 0;
 }
 
-nav a:hover::before{
-width: 100%;
+ul li a {
+  position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    display: block;
+    padding: 1.5em 3.95em;
+    background-color: #212121;
+    width: 100%;
+    left: 0;
+    color: #C4C4C4;
+}
+
+main {
+    background: #484848;
+    padding: 1.5em 0em;
+}
+
+h1 {
+    margin: 0;
+    color: #C4C4C4;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: #C4C4C4;
+    text-align: center;
+}
+
+.cta {
+    display: block;
+    color: #fff;
+    background: #0E7FFF;
+    text-decoration: none;
+    padding: 8px 50px;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 2em 0;
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        display: grid;
+        grid-template-columns: 20% auto;
+        padding: 0em;
+        height: 105%;
+        overflow: hidden
+    }
+
+    img.notdisplay {
+        display: none;
+    }
+
+    figcaption.notdisplay{
+        display: none;
+    }
+
+    img{
+      position: fixed;
+      display: grid;
+      width: 17%;
+      height: auto;
+      padding-left: 1%;
+      padding-top: 5%;
+
+    }
+
+    aside {
+        background: #212121;
+        grid-template-columns: auto;
+        grid-template-rows: 20%;
+        padding: 0;
+        width: 50%;
+    }
+
+    aside.position{
+      position: relative;
+      float: left;
+      margin: 0 -11%;
+    }
+
+    main {
+        padding: 4em;
+        background: #313131 url('../images/bg.svg') no-repeat bottom right;
+        background-size: 100%;
+    }
+
+    figcaption.notdisplay {
+        text-align: center;
+        color: #C4C4C4;
+    }
+
+
+
+    ul {
+        display: block;
+        margin-top: 2em;
+        position: relative !important;
+        background: none !important;
+        width: 100% !important;
+    }
+
+    ul li a:hover {
+        background-color: #6E6E6E;
+    }
+
+    nav {
+        background: none;
+    }
+
+    .cta {
+        display: inline-block;
+        font-size: 1.3em;
+        padding: .8em 3em;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-top: 2em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
 }
