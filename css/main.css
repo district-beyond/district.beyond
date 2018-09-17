@@ -1,0 +1,144 @@
+body{
+  margin: 0;
+  background: #313131;
+  font-family: "Montserrat";
+  font-weight: 300;
+}
+
+.small{
+  position: fixed;
+  left: -50%;
+  right: auto;
+
+  bottom: -50%;
+
+}
+
+.text{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  bottom: 10%;
+
+  height: 200px;
+  width: auto;
+  margin-top: -15em;
+}
+
+div{
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+
+div ul{
+
+}
+
+div a{
+  color: #C4C4C4;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-style: normal;
+}
+
+div li{
+  display: inline-block;
+  margin: 0 40;
+  padding-top: 35px;
+
+  position: relative;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+header{
+  background: #1f1f1f;
+}
+
+header::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo{
+  float: left;
+  height: 100px;
+  width: auto;
+}
+
+
+nav{
+  float: right;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li{
+  display: inline-block;
+  margin: 0 35;
+  padding-top: 35px;
+
+  position: relative;
+}
+
+nav a{
+  color: #C4C4C4;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-style: normal;
+
+  }
+
+  div a:hover{
+  color: #6E6E6E;
+  }
+
+  div a::before{
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: #C4C4C4;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 200ms;
+  }
+
+  div a:hover::before{
+  width: 100%;
+  }
+
+
+
+nav a:hover{
+color: #6E6E6E;
+}
+
+nav a::before{
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #C4C4C4;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before{
+width: 100%;
+}
